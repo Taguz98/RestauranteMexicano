@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
 
+import modelo.estilo.BtnsHover;
+import modelo.estilo.TblEstilo;
 import vista.PnlBienvenido;
 import vista.RecepcionistaUI.PnlMenuRecepcionista;
 import vista.RecepcionistaUI.PnlRecepcionistaAsistencia;
@@ -18,9 +15,9 @@ import vista.VtnPrincipal;
  * @author Usuario
  */
 public class CTRRecepcionista {
-    private VtnPrincipal vtnPrin; 
-    private PnlMenuRecepcionista pnlMenu; 
-    private PnlBienvenido pnlBienvenido; 
+    private final VtnPrincipal vtnPrin; 
+    private final PnlMenuRecepcionista pnlMenu; 
+    private final PnlBienvenido pnlBienvenido; 
 
     public CTRRecepcionista(VtnPrincipal vtnPrin, PnlMenuRecepcionista pnlMenu, PnlBienvenido pnlBienvenido) {
         this.vtnPrin = vtnPrin;
@@ -35,10 +32,10 @@ public class CTRRecepcionista {
     public void iniciar(){ 
         System.out.println("Iniciamos el CTR recepcionista.");
         //Agregamos las animaciones a los btns  
-        pnlMenu.getBtnAsistencia().addMouseListener(new CTRBtns(pnlMenu.getBtnAsistencia()));
-        pnlMenu.getBtnMesas().addMouseListener(new CTRBtns(pnlMenu.getBtnMesas()));
-        pnlMenu.getBtnPedidos().addMouseListener(new CTRBtns(pnlMenu.getBtnPedidos()));
-        pnlMenu.getBtnReservas().addMouseListener(new CTRBtns(pnlMenu.getBtnReservas()));
+        pnlMenu.getBtnAsistencia().addMouseListener(new BtnsHover(pnlMenu.getBtnAsistencia()));
+        pnlMenu.getBtnMesas().addMouseListener(new BtnsHover(pnlMenu.getBtnMesas()));
+        pnlMenu.getBtnPedidos().addMouseListener(new BtnsHover(pnlMenu.getBtnPedidos()));
+        pnlMenu.getBtnReservas().addMouseListener(new BtnsHover(pnlMenu.getBtnReservas()));
         //Agregamos una accion a cada btn 
         pnlMenu.getBtnAsistencia().addActionListener(e -> asistencia()); 
         pnlMenu.getBtnMesas().addActionListener(e -> mesas());
@@ -51,8 +48,10 @@ public class CTRRecepcionista {
         PnlRecepcionistaAsistencia pnlAsistencia = new PnlRecepcionistaAsistencia(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlAsistencia); 
         //Agregamos las animaciones a cada btn 
-        pnlAsistencia.getBtnInformacion().addMouseListener(new CTRBtns(pnlAsistencia.getBtnInformacion()));
-        pnlAsistencia.getBtnIngresar().addMouseListener(new CTRBtns(pnlAsistencia.getBtnIngresar()));
+        pnlAsistencia.getBtnInformacion().addMouseListener(new BtnsHover(pnlAsistencia.getBtnInformacion()));
+        pnlAsistencia.getBtnIngresar().addMouseListener(new BtnsHover(pnlAsistencia.getBtnIngresar()));
+        
+        TblEstilo.tituloTbl(pnlAsistencia.getTblAsistencia());
     }
     
     public void mesas(){ 
@@ -60,8 +59,10 @@ public class CTRRecepcionista {
         PnlRecepcionistaMesas pnlMesas = new PnlRecepcionistaMesas(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlMesas);
         //Agreamos las animaciones a cada btn 
-        pnlMesas.getBtnInformacion().addMouseListener(new CTRBtns(pnlMesas.getBtnInformacion()));
-        pnlMesas.getBtnOcupado().addMouseListener(new CTRBtns(pnlMesas.getBtnOcupado()));
+        pnlMesas.getBtnInformacion().addMouseListener(new BtnsHover(pnlMesas.getBtnInformacion()));
+        pnlMesas.getBtnOcupado().addMouseListener(new BtnsHover(pnlMesas.getBtnOcupado()));
+        
+        TblEstilo.tituloTbl(pnlMesas.getTblMesas());
     }
     
     public void pedidos(){ 
@@ -69,9 +70,11 @@ public class CTRRecepcionista {
         PnlRecepcionistaPedidos pnlPedidos = new PnlRecepcionistaPedidos(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlPedidos);
         //Agregamos las animaciones  
-        pnlPedidos.getBtnEditar().addMouseListener(new CTRBtns(pnlPedidos.getBtnEditar()));
-        pnlPedidos.getBtnInformacion().addMouseListener(new CTRBtns(pnlPedidos.getBtnInformacion()));
-        pnlPedidos.getBtnIngresar().addMouseListener(new CTRBtns(pnlPedidos.getBtnIngresar()));
+        pnlPedidos.getBtnEditar().addMouseListener(new BtnsHover(pnlPedidos.getBtnEditar()));
+        pnlPedidos.getBtnInformacion().addMouseListener(new BtnsHover(pnlPedidos.getBtnInformacion()));
+        pnlPedidos.getBtnIngresar().addMouseListener(new BtnsHover(pnlPedidos.getBtnIngresar()));
+        
+        TblEstilo.tituloTbl(pnlPedidos.getTblPedidos());
     }
     
     public void reservas(){ 
@@ -79,8 +82,10 @@ public class CTRRecepcionista {
         PnlRecepcionistaReservas pnlReservas = new PnlRecepcionistaReservas(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlReservas); 
         //Agregamos las animaciones  
-        pnlReservas.getBtnEditar().addMouseListener(new CTRBtns(pnlReservas.getBtnEditar()));
-        pnlReservas.getBtnInformacion().addMouseListener(new CTRBtns(pnlReservas.getBtnInformacion()));
-        pnlReservas.getBtnIngresar().addMouseListener(new CTRBtns(pnlReservas.getBtnIngresar()));
+        pnlReservas.getBtnEditar().addMouseListener(new BtnsHover(pnlReservas.getBtnEditar()));
+        pnlReservas.getBtnInformacion().addMouseListener(new BtnsHover(pnlReservas.getBtnInformacion()));
+        pnlReservas.getBtnIngresar().addMouseListener(new BtnsHover(pnlReservas.getBtnIngresar()));
+        
+        TblEstilo.tituloTbl(pnlReservas.getTblReservas());
     }
 }

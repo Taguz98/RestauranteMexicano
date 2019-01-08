@@ -112,8 +112,8 @@ public class PnlLogin extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("<html>INISIO SESION </html>");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 200, 20));
+        jLabel5.setText("<html>INICIO SESION </html>");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 200, 20));
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -131,7 +131,7 @@ public class PnlLogin extends javax.swing.JPanel {
 
         jLabel1.setBackground(new java.awt.Color(102, 102, 102));
         jLabel1.setOpaque(true);
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 140, 5));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 140, 5));
 
         btnRepartidor.setBackground(new java.awt.Color(77, 98, 94));
         btnRepartidor.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -141,7 +141,7 @@ public class PnlLogin extends javax.swing.JPanel {
         btnRepartidor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRepartidor.setFocusPainted(false);
         btnRepartidor.setOpaque(true);
-        add(btnRepartidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 90, 20));
+        add(btnRepartidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 100, 30));
 
         btnBodeguero.setBackground(new java.awt.Color(77, 98, 94));
         btnBodeguero.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -151,7 +151,7 @@ public class PnlLogin extends javax.swing.JPanel {
         btnBodeguero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBodeguero.setFocusPainted(false);
         btnBodeguero.setOpaque(true);
-        add(btnBodeguero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 20));
+        add(btnBodeguero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 30));
 
         btnCajero.setBackground(new java.awt.Color(77, 98, 94));
         btnCajero.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -161,7 +161,7 @@ public class PnlLogin extends javax.swing.JPanel {
         btnCajero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCajero.setFocusPainted(false);
         btnCajero.setOpaque(true);
-        add(btnCajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 90, 20));
+        add(btnCajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 100, 30));
 
         btnCocinero.setBackground(new java.awt.Color(77, 98, 94));
         btnCocinero.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -171,7 +171,7 @@ public class PnlLogin extends javax.swing.JPanel {
         btnCocinero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCocinero.setFocusPainted(false);
         btnCocinero.setOpaque(true);
-        add(btnCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 90, 20));
+        add(btnCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 100, 30));
 
         btnGerente.setBackground(new java.awt.Color(77, 98, 94));
         btnGerente.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -181,7 +181,7 @@ public class PnlLogin extends javax.swing.JPanel {
         btnGerente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGerente.setFocusPainted(false);
         btnGerente.setOpaque(true);
-        add(btnGerente, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 90, 20));
+        add(btnGerente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 100, 30));
 
         btnMesero.setBackground(new java.awt.Color(77, 98, 94));
         btnMesero.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -191,7 +191,7 @@ public class PnlLogin extends javax.swing.JPanel {
         btnMesero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMesero.setFocusPainted(false);
         btnMesero.setOpaque(true);
-        add(btnMesero, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 90, 20));
+        add(btnMesero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 100, 30));
 
         btnRecepcionista.setBackground(new java.awt.Color(77, 98, 94));
         btnRecepcionista.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -201,7 +201,7 @@ public class PnlLogin extends javax.swing.JPanel {
         btnRecepcionista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRecepcionista.setFocusPainted(false);
         btnRecepcionista.setOpaque(true);
-        add(btnRecepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 110, 20));
+        add(btnRecepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 120, 30));
     }// </editor-fold>//GEN-END:initComponents
 
 

@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import modelo.estilo.BtnsHover;
 import java.util.Arrays;
 import vista.BodegueroUI.PnlMenuBodeguero;
 import vista.CajeroUI.PnlMenuCajero;
@@ -46,8 +47,8 @@ public class CTRLogin extends Thread {
         vtnPrin.getBtnSalir().setVisible(false);
 
         //Agrego las animaciones a los btns  
-        vtnPrin.getBtnSalir().addMouseListener(new CTRBtns(vtnPrin.getBtnSalir()));
-        pnlLogin.getBtnEntrar().addMouseListener(new CTRBtns(pnlLogin.getBtnEntrar()));
+        vtnPrin.getBtnSalir().addMouseListener(new BtnsHover(vtnPrin.getBtnSalir()));
+        pnlLogin.getBtnEntrar().addMouseListener(new BtnsHover(pnlLogin.getBtnEntrar()));
         
         //Ocusltamos los btns  de tipo de empleado  
         //ocultarBtns();

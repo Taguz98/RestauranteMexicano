@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
 
+import modelo.estilo.BtnsHover;
+import modelo.estilo.TblEstilo;
 import vista.PnlBienvenido;
 import vista.RepartidorUI.PnlMenuRepartidor;
 import vista.RepartidorUI.PnlRepartidorPedidos;
@@ -16,9 +13,9 @@ import vista.VtnPrincipal;
  */
 public class CTRRepartidor {
     
-    private VtnPrincipal vtnPrin; 
-    private PnlMenuRepartidor pnlMenu; 
-    private PnlBienvenido pnlBienvenido; 
+    private final VtnPrincipal vtnPrin; 
+    private final PnlMenuRepartidor pnlMenu; 
+    private final PnlBienvenido pnlBienvenido; 
 
     public CTRRepartidor(VtnPrincipal vtnPrin, PnlMenuRepartidor pnlMenu, PnlBienvenido pnlBienvenido) {
         this.vtnPrin = vtnPrin;
@@ -32,7 +29,7 @@ public class CTRRepartidor {
     public void iniciar(){ 
         System.out.println("Iniciamos el CTR repartidor.");
         //Agregamos las aimaciones  
-        pnlMenu.getBtnPedidos().addMouseListener(new CTRBtns(pnlMenu.getBtnPedidos()));
+        pnlMenu.getBtnPedidos().addMouseListener(new BtnsHover(pnlMenu.getBtnPedidos()));
         //Asignamos una accion a cada btn  
         pnlMenu.getBtnPedidos().addActionListener(e -> pedidos());
     }
@@ -42,8 +39,10 @@ public class CTRRepartidor {
         PnlRepartidorPedidos pnlPedidos = new PnlRepartidorPedidos(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlPedidos);
         //Agregamos las animaciones 
-        pnlPedidos.getBtnEntregado().addMouseListener(new CTRBtns(pnlPedidos.getBtnEntregado()));
-        pnlPedidos.getBtnInformacion().addMouseListener(new CTRBtns(pnlPedidos.getBtnInformacion()));
+        pnlPedidos.getBtnEntregado().addMouseListener(new BtnsHover(pnlPedidos.getBtnEntregado()));
+        pnlPedidos.getBtnInformacion().addMouseListener(new BtnsHover(pnlPedidos.getBtnInformacion()));
+        
+        TblEstilo.tituloTbl(pnlPedidos.getTblPedidos());
     }
     
 }

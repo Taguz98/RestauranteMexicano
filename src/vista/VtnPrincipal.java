@@ -11,7 +11,6 @@ import java.awt.Frame;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import javax.swing.JButton;
-import javax.swing.border.Border;
 
 /**
  *

@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
 
+import modelo.estilo.BtnsHover;
+import modelo.estilo.TblEstilo;
 import vista.CajeroUI.PnlCajeroCaja;
 import vista.CajeroUI.PnlCajeroVentas;
 import vista.CajeroUI.PnlMenuCajero;
@@ -17,9 +14,9 @@ import vista.VtnPrincipal;
  */
 public class CTRCajero {
     
-    private VtnPrincipal vtnPrin;  
-    private PnlMenuCajero pnlMenu; 
-    private PnlBienvenido pnlBienvenido; 
+    private final VtnPrincipal vtnPrin;  
+    private final PnlMenuCajero pnlMenu; 
+    private final PnlBienvenido pnlBienvenido; 
 
     public CTRCajero(VtnPrincipal vtnPrin, PnlMenuCajero pnlMenu, PnlBienvenido pnlBienvenido) {
         this.vtnPrin = vtnPrin;
@@ -33,8 +30,8 @@ public class CTRCajero {
     public void iniciar(){ 
         System.out.println("Iniciamos el CTR cajero");
         //Agregamos las anmaciones a los btns 
-        pnlMenu.getBtnCaja().addMouseListener(new CTRBtns(pnlMenu.getBtnCaja())); 
-        pnlMenu.getBtnVentas().addMouseListener(new CTRBtns(pnlMenu.getBtnVentas())); 
+        pnlMenu.getBtnCaja().addMouseListener(new BtnsHover(pnlMenu.getBtnCaja())); 
+        pnlMenu.getBtnVentas().addMouseListener(new BtnsHover(pnlMenu.getBtnVentas())); 
         
         //Asignamos una metodo al dar click a un btn  
         pnlMenu.getBtnCaja().addActionListener(e -> caja()); 
@@ -47,9 +44,12 @@ public class CTRCajero {
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlCaja); 
         
         //Agregamos las animaciones a los btns  
-        pnlCaja.getBtnEliminar().addMouseListener(new CTRBtns(pnlCaja.getBtnEliminar())); 
-        pnlCaja.getBtnIngresar().addMouseListener(new CTRBtns(pnlCaja.getBtnIngresar())); 
-        pnlCaja.getBtnModificar().addMouseListener(new CTRBtns(pnlCaja.getBtnModificar())); 
+        pnlCaja.getBtnEliminar().addMouseListener(new BtnsHover(pnlCaja.getBtnEliminar())); 
+        pnlCaja.getBtnIngresar().addMouseListener(new BtnsHover(pnlCaja.getBtnIngresar())); 
+        pnlCaja.getBtnModificar().addMouseListener(new BtnsHover(pnlCaja.getBtnModificar())); 
+        
+        //Agregamos el estilo a las tablas  
+        TblEstilo.tituloTbl(pnlCaja.getTblCaja());
     }
     
     public void ventas(){ 
@@ -58,8 +58,11 @@ public class CTRCajero {
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlVentas);
         
         //Agregamos las animaciones a los btns  
-        pnlVentas.getBtnImprimir().addMouseListener(new CTRBtns(pnlVentas.getBtnImprimir()));
-        pnlVentas.getBtnVer().addMouseListener(new CTRBtns(pnlVentas.getBtnVer()));
+        pnlVentas.getBtnImprimir().addMouseListener(new BtnsHover(pnlVentas.getBtnImprimir()));
+        pnlVentas.getBtnVer().addMouseListener(new BtnsHover(pnlVentas.getBtnVer()));
+        
+        //Agregamos el estilo a las tablas  
+        TblEstilo.tituloTbl(pnlVentas.getTblVentas());
     }
     
     

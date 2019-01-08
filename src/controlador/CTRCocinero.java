@@ -5,11 +5,12 @@
  */
 package controlador;
 
+import modelo.estilo.BtnsHover;
+import modelo.estilo.TblEstilo;
 import vista.CocineroUI.PnlCocineroInventario;
 import vista.CocineroUI.PnlCocineroOrdenes;
 import vista.CocineroUI.PnlCocineroPlatos;
 import vista.CocineroUI.PnlMenuCocinero;
-import vista.GerenteUI.PnlGerentePagos;
 import vista.PnlBienvenido;
 import vista.VtnPrincipal;
 
@@ -18,9 +19,9 @@ import vista.VtnPrincipal;
  * @author Usuario
  */
 public class CTRCocinero {
-    private VtnPrincipal vtnPrin; 
-    private PnlMenuCocinero pnlMenu; 
-    private PnlBienvenido pnlBienvenido; 
+    private final VtnPrincipal vtnPrin; 
+    private final PnlMenuCocinero pnlMenu; 
+    private final PnlBienvenido pnlBienvenido; 
 
     public CTRCocinero(VtnPrincipal vtnPrin, PnlMenuCocinero pnlMenu, PnlBienvenido pnlBienvenido) {
         this.vtnPrin = vtnPrin;
@@ -34,9 +35,9 @@ public class CTRCocinero {
     public void iniciar(){ 
         System.out.println("Inciamos el CTR cocinero");
         //Agregamos animaciones  
-        pnlMenu.getBtnInventario().addMouseListener(new CTRBtns(pnlMenu.getBtnInventario())); 
-        pnlMenu.getBtnOrdenes().addMouseListener(new CTRBtns(pnlMenu.getBtnOrdenes())); 
-        pnlMenu.getBtnPlatos().addMouseListener(new CTRBtns(pnlMenu.getBtnPlatos())); 
+        pnlMenu.getBtnInventario().addMouseListener(new BtnsHover(pnlMenu.getBtnInventario())); 
+        pnlMenu.getBtnOrdenes().addMouseListener(new BtnsHover(pnlMenu.getBtnOrdenes())); 
+        pnlMenu.getBtnPlatos().addMouseListener(new BtnsHover(pnlMenu.getBtnPlatos())); 
         //Le asignamos un funcion al dar click a un boton 
         
         pnlMenu.getBtnInventario().addActionListener(e -> inventario()); 
@@ -49,9 +50,11 @@ public class CTRCocinero {
         PnlCocineroInventario pnlInventario = new PnlCocineroInventario(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlInventario); 
         //Le agregamos las animaciones a los btns 
-        pnlInventario.getBtnActualizar().addMouseListener(new CTRBtns(pnlInventario.getBtnActualizar())); 
-        pnlInventario.getBtnEliminar().addMouseListener(new CTRBtns(pnlInventario.getBtnEliminar())); 
-        pnlInventario.getBtnIngresar().addMouseListener(new CTRBtns(pnlInventario.getBtnIngresar())); 
+        pnlInventario.getBtnActualizar().addMouseListener(new BtnsHover(pnlInventario.getBtnActualizar())); 
+        pnlInventario.getBtnEliminar().addMouseListener(new BtnsHover(pnlInventario.getBtnEliminar())); 
+        pnlInventario.getBtnIngresar().addMouseListener(new BtnsHover(pnlInventario.getBtnIngresar())); 
+        
+        TblEstilo.tituloTbl(pnlInventario.getTblInventario()); 
     }
     
     public void ordenes(){ 
@@ -59,9 +62,11 @@ public class CTRCocinero {
         PnlCocineroOrdenes pnlOrdenes = new PnlCocineroOrdenes(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlOrdenes);
         //Agregamos las animaciones  
-        pnlOrdenes.getBtnEntregado().addMouseListener(new CTRBtns(pnlOrdenes.getBtnEntregado()));
-        pnlOrdenes.getBtnIngresar().addMouseListener(new CTRBtns(pnlOrdenes.getBtnIngresar())); 
-        pnlOrdenes.getBtnModificar().addMouseListener(new CTRBtns(pnlOrdenes.getBtnModificar())); 
+        pnlOrdenes.getBtnEntregado().addMouseListener(new BtnsHover(pnlOrdenes.getBtnEntregado()));
+        pnlOrdenes.getBtnIngresar().addMouseListener(new BtnsHover(pnlOrdenes.getBtnIngresar())); 
+        pnlOrdenes.getBtnModificar().addMouseListener(new BtnsHover(pnlOrdenes.getBtnModificar())); 
+        
+        TblEstilo.tituloTbl(pnlOrdenes.getTblOrdenes()); 
     }
     
     public void platos(){ 
@@ -69,8 +74,10 @@ public class CTRCocinero {
         PnlCocineroPlatos pnlPlatos = new PnlCocineroPlatos(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlPlatos); 
         //Agregamos las animaciones 
-        pnlPlatos.getBtnInformacion().addMouseListener(new CTRBtns(pnlPlatos.getBtnInformacion()));
-        pnlPlatos.getBtnIngresar().addMouseListener(new CTRBtns(pnlPlatos.getBtnIngresar())); 
-        pnlPlatos.getBtnModificar().addMouseListener(new CTRBtns(pnlPlatos.getBtnModificar())); 
+        pnlPlatos.getBtnInformacion().addMouseListener(new BtnsHover(pnlPlatos.getBtnInformacion()));
+        pnlPlatos.getBtnIngresar().addMouseListener(new BtnsHover(pnlPlatos.getBtnIngresar())); 
+        pnlPlatos.getBtnModificar().addMouseListener(new BtnsHover(pnlPlatos.getBtnModificar())); 
+        
+        TblEstilo.tituloTbl(pnlPlatos.getTblPlatos());
     }
 }

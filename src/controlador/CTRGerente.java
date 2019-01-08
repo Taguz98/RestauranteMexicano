@@ -1,10 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
 
+import java.awt.Color;
+import modelo.estilo.BtnsHover;
+import modelo.estilo.TblEstilo;
 import vista.GerenteUI.PnlGerenteCompras;
 import vista.GerenteUI.PnlGerenteContratos;
 import vista.GerenteUI.PnlGerentePagos;
@@ -20,9 +18,9 @@ import vista.VtnPrincipal;
  */
 public class CTRGerente {
     
-    private VtnPrincipal vtnPrin; 
-    private PnlMenuGerente pnlMenu; 
-    private PnlBienvenido pnlBienvenido; 
+    private final VtnPrincipal vtnPrin; 
+    private final PnlMenuGerente pnlMenu; 
+    private final PnlBienvenido pnlBienvenido; 
 
     public CTRGerente(VtnPrincipal vtnPrin, PnlMenuGerente pnlMenu, PnlBienvenido pnlBienvenido) {
         this.vtnPrin = vtnPrin;
@@ -36,11 +34,11 @@ public class CTRGerente {
     public void iniciar(){ 
         System.out.println("Iniciamos el CTR gerente.");
         //Agregamos las animaciones  
-        pnlMenu.getBtnCompras().addMouseListener(new CTRBtns(pnlMenu.getBtnCompras())); 
-        pnlMenu.getBtnContratos().addMouseListener(new CTRBtns(pnlMenu.getBtnContratos()));
-        pnlMenu.getBtnPagos().addMouseListener(new CTRBtns(pnlMenu.getBtnPagos())); 
-        pnlMenu.getBtnPlatos().addMouseListener(new CTRBtns(pnlMenu.getBtnPlatos())); 
-        pnlMenu.getBtnVentas().addMouseListener(new CTRBtns(pnlMenu.getBtnVentas())); 
+        pnlMenu.getBtnCompras().addMouseListener(new BtnsHover(pnlMenu.getBtnCompras())); 
+        pnlMenu.getBtnContratos().addMouseListener(new BtnsHover(pnlMenu.getBtnContratos()));
+        pnlMenu.getBtnPagos().addMouseListener(new BtnsHover(pnlMenu.getBtnPagos())); 
+        pnlMenu.getBtnPlatos().addMouseListener(new BtnsHover(pnlMenu.getBtnPlatos())); 
+        pnlMenu.getBtnVentas().addMouseListener(new BtnsHover(pnlMenu.getBtnVentas())); 
         
         //Le asignamos una accion al dar click a un boton          
         pnlMenu.getBtnCompras().addActionListener(e -> compras());
@@ -55,8 +53,13 @@ public class CTRGerente {
         PnlGerenteCompras pnlCompras = new PnlGerenteCompras(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlCompras);
         //Agregamos animaciones  
-        pnlCompras.getBtnInformacion().addMouseListener(new CTRBtns(pnlCompras.getBtnInformacion())); 
-        pnlCompras.getBtnReporte().addMouseListener(new CTRBtns(pnlCompras.getBtnReporte())); 
+        pnlCompras.getBtnInformacion().addMouseListener(new BtnsHover(pnlCompras.getBtnInformacion())); 
+        pnlCompras.getBtnReporte().addMouseListener(new BtnsHover(pnlCompras.getBtnReporte())); 
+        
+        TblEstilo.tituloTbl(pnlCompras.getTblCompras());
+        
+        //Para pintarlo al dar click  aqui 
+        pnlMenu.getBtnCompras().setBackground(new Color(86, 171, 96));
     }
     
     public void contratos(){ 
@@ -64,9 +67,11 @@ public class CTRGerente {
         PnlGerenteContratos pnlContratos = new PnlGerenteContratos(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlContratos); 
         //Agregamos las animaciones
-        pnlContratos.getBtnArchivar().addMouseListener(new CTRBtns(pnlContratos.getBtnArchivar()));
-        pnlContratos.getBtnIngresar().addMouseListener(new CTRBtns(pnlContratos.getBtnIngresar())); 
-        pnlContratos.getBtnModificar().addMouseListener(new CTRBtns(pnlContratos.getBtnModificar())); 
+        pnlContratos.getBtnArchivar().addMouseListener(new BtnsHover(pnlContratos.getBtnArchivar()));
+        pnlContratos.getBtnIngresar().addMouseListener(new BtnsHover(pnlContratos.getBtnIngresar())); 
+        pnlContratos.getBtnModificar().addMouseListener(new BtnsHover(pnlContratos.getBtnModificar())); 
+        
+        TblEstilo.tituloTbl(pnlContratos.getTblContratos());
     }
     
     public void pagos(){ 
@@ -74,12 +79,14 @@ public class CTRGerente {
         PnlGerentePagos pnlPagos = new PnlGerentePagos(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlPagos); 
         //Agregamos las animaciones  
-        pnlPagos.getBtnEliminar().addMouseListener(new CTRBtns(pnlPagos.getBtnEliminar()));
-        pnlPagos.getBtnInformacion().addMouseListener(new CTRBtns(pnlPagos.getBtnInformacion()));
-        pnlPagos.getBtnModificar().addMouseListener(new CTRBtns(pnlPagos.getBtnModificar()));
-        pnlPagos.getBtnPendientes().addMouseListener(new CTRBtns(pnlPagos.getBtnPendientes()));
-        pnlPagos.getBtnRealizar().addMouseListener(new CTRBtns(pnlPagos.getBtnRealizar()));
-        pnlPagos.getBtnReporte().addMouseListener(new CTRBtns(pnlPagos.getBtnReporte()));
+        pnlPagos.getBtnEliminar().addMouseListener(new BtnsHover(pnlPagos.getBtnEliminar()));
+        pnlPagos.getBtnInformacion().addMouseListener(new BtnsHover(pnlPagos.getBtnInformacion()));
+        pnlPagos.getBtnModificar().addMouseListener(new BtnsHover(pnlPagos.getBtnModificar()));
+        pnlPagos.getBtnPendientes().addMouseListener(new BtnsHover(pnlPagos.getBtnPendientes()));
+        pnlPagos.getBtnRealizar().addMouseListener(new BtnsHover(pnlPagos.getBtnRealizar()));
+        pnlPagos.getBtnReporte().addMouseListener(new BtnsHover(pnlPagos.getBtnReporte()));
+        
+        TblEstilo.tituloTbl(pnlPagos.getTblPagos());
     }
     
     public void platos(){ 
@@ -87,9 +94,11 @@ public class CTRGerente {
         PnlGerentePlatos pnlPlatos = new PnlGerentePlatos(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlPlatos);
         //Agregamos las animaciones a los btns 
-        pnlPlatos.getBtnEliminar().addMouseListener(new CTRBtns(pnlPlatos.getBtnEliminar()));
-        pnlPlatos.getBtnIngresar().addMouseListener(new CTRBtns(pnlPlatos.getBtnIngresar()));
-        pnlPlatos.getBtnModificar().addMouseListener(new CTRBtns(pnlPlatos.getBtnModificar()));
+        pnlPlatos.getBtnEliminar().addMouseListener(new BtnsHover(pnlPlatos.getBtnEliminar()));
+        pnlPlatos.getBtnIngresar().addMouseListener(new BtnsHover(pnlPlatos.getBtnIngresar()));
+        pnlPlatos.getBtnModificar().addMouseListener(new BtnsHover(pnlPlatos.getBtnModificar()));
+        
+        TblEstilo.tituloTbl(pnlPlatos.getTblPlatos()); 
     }
     
     public void ventas(){ 
@@ -97,8 +106,10 @@ public class CTRGerente {
         PnlGerenteVentas pnlVentas = new PnlGerenteVentas(); 
         CTRMaster.cambioPanel(vtnPrin.getPnlPrincipal(), pnlVentas); 
         //Agregamos las animaciones  
-        pnlVentas.getBtnInformacion().addMouseListener(new CTRBtns(pnlVentas.getBtnInformacion()));
-        pnlVentas.getBtnReporte().addMouseListener(new CTRBtns(pnlVentas.getBtnReporte()));
+        pnlVentas.getBtnInformacion().addMouseListener(new BtnsHover(pnlVentas.getBtnInformacion()));
+        pnlVentas.getBtnReporte().addMouseListener(new BtnsHover(pnlVentas.getBtnReporte()));
+        
+        TblEstilo.tituloTbl(pnlVentas.getTblVentas());
     }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlador;
+package modelo.estilo;
 
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -14,11 +14,11 @@ import javax.swing.JButton;
  *
  * @author Usuario
  */
-public class CTRBtns implements MouseListener {
+public class BtnsHover implements MouseListener {
 
     private JButton btn;
 
-    public CTRBtns(JButton btn) {
+    public BtnsHover(JButton btn) {
         this.btn = btn;
     }
 
