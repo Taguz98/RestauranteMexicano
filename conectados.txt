@@ -1,2 +1,6 @@
 Jhonny!!! Conectado y listo para programarrr!!! 
+<<<<<<< HEAD
 Holis!! Andres97 conectado!!
+=======
+Holis!! Andres97 conectado!!
+>>>>>>> 14179ba803acddb0fba36f26fe89978aa39b5fce
