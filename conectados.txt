@@ -1,3 +1,12 @@
 Jhonny!!! Conectado y listo para programarrr!!! 
+<<<<<<< HEAD
 Holis!! Andres97 conectado!!
+<<<<<<< HEAD
 Listo todo funciono correctamente!!! 
+=======
+=======
+Holis!! Andres97 conectado!!
+>>>>>>> 14179ba803acddb0fba36f26fe89978aa39b5fce
+>>>>>>> b22072fdc5666583798191c96b4bc00e3ba0f280
+
+Salen esos codios y etiquetas cuando haces un cambio en la misma linea
