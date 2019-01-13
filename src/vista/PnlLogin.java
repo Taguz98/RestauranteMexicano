@@ -93,12 +93,10 @@ public class PnlLogin extends javax.swing.JPanel {
         setBackground(new java.awt.Color(245, 181, 55));
         setMinimumSize(new java.awt.Dimension(200, 410));
         setPreferredSize(new java.awt.Dimension(200, 410));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("Contraseña:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 170, 30));
 
         btnEntrar.setBackground(new java.awt.Color(77, 98, 94));
         btnEntrar.setFont(new java.awt.Font("Oswald", 0, 14)); // NOI18N
@@ -108,30 +106,24 @@ public class PnlLogin extends javax.swing.JPanel {
         btnEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEntrar.setFocusPainted(false);
         btnEntrar.setOpaque(true);
-        add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 80, 30));
 
         jLabel5.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("<html>INICIO SESION </html>");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 200, 20));
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("Cedula:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 170, 30));
 
         txtCedula.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         txtCedula.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtCedula.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 160, 30));
 
         txtPass.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         txtPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 160, 30));
 
         jLabel1.setBackground(new java.awt.Color(102, 102, 102));
         jLabel1.setOpaque(true);
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 140, 5));
 
         btnRepartidor.setBackground(new java.awt.Color(77, 98, 94));
         btnRepartidor.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -141,7 +133,6 @@ public class PnlLogin extends javax.swing.JPanel {
         btnRepartidor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRepartidor.setFocusPainted(false);
         btnRepartidor.setOpaque(true);
-        add(btnRepartidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 100, 30));
 
         btnBodeguero.setBackground(new java.awt.Color(77, 98, 94));
         btnBodeguero.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -151,7 +142,6 @@ public class PnlLogin extends javax.swing.JPanel {
         btnBodeguero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBodeguero.setFocusPainted(false);
         btnBodeguero.setOpaque(true);
-        add(btnBodeguero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 30));
 
         btnCajero.setBackground(new java.awt.Color(77, 98, 94));
         btnCajero.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -161,7 +151,6 @@ public class PnlLogin extends javax.swing.JPanel {
         btnCajero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCajero.setFocusPainted(false);
         btnCajero.setOpaque(true);
-        add(btnCajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 100, 30));
 
         btnCocinero.setBackground(new java.awt.Color(77, 98, 94));
         btnCocinero.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -171,7 +160,6 @@ public class PnlLogin extends javax.swing.JPanel {
         btnCocinero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCocinero.setFocusPainted(false);
         btnCocinero.setOpaque(true);
-        add(btnCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 100, 30));
 
         btnGerente.setBackground(new java.awt.Color(77, 98, 94));
         btnGerente.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -181,7 +169,6 @@ public class PnlLogin extends javax.swing.JPanel {
         btnGerente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGerente.setFocusPainted(false);
         btnGerente.setOpaque(true);
-        add(btnGerente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 100, 30));
 
         btnMesero.setBackground(new java.awt.Color(77, 98, 94));
         btnMesero.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -191,7 +178,6 @@ public class PnlLogin extends javax.swing.JPanel {
         btnMesero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMesero.setFocusPainted(false);
         btnMesero.setOpaque(true);
-        add(btnMesero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 100, 30));
 
         btnRecepcionista.setBackground(new java.awt.Color(77, 98, 94));
         btnRecepcionista.setFont(new java.awt.Font("Oswald", 0, 10)); // NOI18N
@@ -201,7 +187,77 @@ public class PnlLogin extends javax.swing.JPanel {
         btnRecepcionista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRecepcionista.setFocusPainted(false);
         btnRecepcionista.setOpaque(true);
-        add(btnRecepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 120, 30));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(btnBodeguero, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(btnCajero, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnMesero, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(btnCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnRepartidor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(btnRecepcionista, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBodeguero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCajero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMesero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRepartidor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(btnRecepcionista, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 

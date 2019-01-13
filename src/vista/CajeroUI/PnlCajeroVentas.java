@@ -177,8 +177,7 @@ public class PnlCajeroVentas extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(86, 171, 96));
 
         btnImprimir.setBackground(new java.awt.Color(77, 98, 94));
         btnImprimir.setFont(new java.awt.Font("Oswald", 0, 14)); // NOI18N
@@ -187,7 +186,6 @@ public class PnlCajeroVentas extends javax.swing.JPanel {
         btnImprimir.setContentAreaFilled(false);
         btnImprimir.setFocusPainted(false);
         btnImprimir.setOpaque(true);
-        add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 150, 30));
 
         btnVer.setBackground(new java.awt.Color(77, 98, 94));
         btnVer.setFont(new java.awt.Font("Oswald", 0, 14)); // NOI18N
@@ -196,12 +194,10 @@ public class PnlCajeroVentas extends javax.swing.JPanel {
         btnVer.setContentAreaFilled(false);
         btnVer.setFocusPainted(false);
         btnVer.setOpaque(true);
-        add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 140, 30));
 
         txtTotal.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         txtTotal.setText("2013");
         txtTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 140, 30));
 
         tblVentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -218,28 +214,74 @@ public class PnlCajeroVentas extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblVentas);
         tblVentas.getAccessibleContext().setAccessibleName("");
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 560, 290));
-
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Search_26px_3.png"))); // NOI18N
         btnBuscar.setBorderPainted(false);
         btnBuscar.setContentAreaFilled(false);
         btnBuscar.setFocusPainted(false);
         btnBuscar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Search_26px_5.png"))); // NOI18N
-        add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 40, 30));
 
         jLabel1.setText("Total");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 420, -1, -1));
 
         txtBuscar.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         txtBuscar.setText("2013");
         txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 130, 30));
 
         jLabel2.setText("Año");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         jLabel3.setText("Consultar Ventas por Año");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel3))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2)
+                .addGap(31, 31, 31)
+                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(btnVer, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane1)
+                .addGap(20, 20, 20))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(380, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(36, 36, 36)
+                .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel3)
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel2))
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 

@@ -45,7 +45,6 @@ public class PnlMenuCajero extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(245, 181, 55));
         setMinimumSize(new java.awt.Dimension(200, 410));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCaja.setBackground(new java.awt.Color(77, 98, 94));
         btnCaja.setFont(new java.awt.Font("Oswald", 0, 22)); // NOI18N
@@ -59,7 +58,6 @@ public class PnlMenuCajero extends javax.swing.JPanel {
                 btnCajaActionPerformed(evt);
             }
         });
-        add(btnCaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 200, 50));
 
         btnVentas.setBackground(new java.awt.Color(77, 98, 94));
         btnVentas.setFont(new java.awt.Font("Oswald", 0, 22)); // NOI18N
@@ -68,22 +66,49 @@ public class PnlMenuCajero extends javax.swing.JPanel {
         btnVentas.setContentAreaFilled(false);
         btnVentas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         btnVentas.setOpaque(true);
-        add(btnVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 200, 50));
 
         lblNombreCajero.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         lblNombreCajero.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblNombreCajero.setText("Nombre Cajero");
-        add(lblNombreCajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 160, 30));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Cajero");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 30));
 
         jLabel3.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Bienvenido");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 160, 30));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(lblNombreCajero, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(btnCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lblNombreCajero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCajaActionPerformed

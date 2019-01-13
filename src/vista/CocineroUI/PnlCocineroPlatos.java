@@ -147,8 +147,7 @@ public class PnlCocineroPlatos extends javax.swing.JPanel {
         btnBuscar = new javax.swing.JButton();
         cbFiltrar = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(86, 171, 96));
 
         btnInformacion.setBackground(new java.awt.Color(77, 98, 94));
         btnInformacion.setFont(new java.awt.Font("Oswald", 0, 14)); // NOI18N
@@ -157,7 +156,6 @@ public class PnlCocineroPlatos extends javax.swing.JPanel {
         btnInformacion.setContentAreaFilled(false);
         btnInformacion.setFocusPainted(false);
         btnInformacion.setOpaque(true);
-        add(btnInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 150, 30));
 
         btnIngresar.setBackground(new java.awt.Color(77, 98, 94));
         btnIngresar.setFont(new java.awt.Font("Oswald", 0, 14)); // NOI18N
@@ -166,7 +164,6 @@ public class PnlCocineroPlatos extends javax.swing.JPanel {
         btnIngresar.setContentAreaFilled(false);
         btnIngresar.setFocusPainted(false);
         btnIngresar.setOpaque(true);
-        add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 150, 30));
 
         btnModificar.setBackground(new java.awt.Color(77, 98, 94));
         btnModificar.setFont(new java.awt.Font("Oswald", 0, 14)); // NOI18N
@@ -175,11 +172,9 @@ public class PnlCocineroPlatos extends javax.swing.JPanel {
         btnModificar.setContentAreaFilled(false);
         btnModificar.setFocusPainted(false);
         btnModificar.setOpaque(true);
-        add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 160, 30));
 
         txtBuscar.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 200, 30));
 
         tblPlatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -194,17 +189,53 @@ public class PnlCocineroPlatos extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblPlatos);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 560, 330));
-
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Search_26px_3.png"))); // NOI18N
         btnBuscar.setBorderPainted(false);
         btnBuscar.setContentAreaFilled(false);
         btnBuscar.setFocusPainted(false);
         btnBuscar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Search_26px_5.png"))); // NOI18N
-        add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 40, 30));
 
         cbFiltrar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(cbFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, 150, 30));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cbFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1))
+                .addGap(20, 20, 20))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                .addGap(20, 20, 20))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 
